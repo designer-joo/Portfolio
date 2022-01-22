@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="scene_0">
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+					asperiores quam similique blanditiis, expedita ipsum dignissimos
+					harum. Facere aliquam excepturi nostrum minima fugiat quos nesciunt
+					culpa placeat quidem. At ab perferendis itaque quae obcaecati. Amet
+					voluptatem maxime itaque non, necessitatibus voluptas velit vitae,
+					mollitia est exercitationem dicta incidunt odit tempora!
+				</p>
+			</div>
+		</section>
+
+		<section class="scene_1">
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+					asperiores quam similique blanditiis, expedita ipsum dignissimos
+					harum. Facere aliquam excepturi nostrum minima fugiat quos nesciunt
+					culpa placeat quidem. At ab perferendis itaque quae obcaecati. Amet
+					voluptatem maxime itaque non, necessitatibus voluptas velit vitae,
+					mollitia est exercitationem dicta incidunt odit tempora!
+				</p>
+			</div>
+		</section>
+
+		<section class="scene_2">
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+					asperiores quam similique blanditiis, expedita ipsum dignissimos
+					harum. Facere aliquam excepturi nostrum minima fugiat quos nesciunt
+					culpa placeat quidem. At ab perferendis itaque quae obcaecati. Amet
+					voluptatem maxime itaque non, necessitatibus voluptas velit vitae,
+					mollitia est exercitationem dicta incidunt odit tempora!
+				</p>
+			</div>
+		</section>
+
+		<section class="scene_3">
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+					asperiores quam similique blanditiis, expedita ipsum dignissimos
+					harum. Facere aliquam excepturi nostrum minima fugiat quos nesciunt
+					culpa placeat quidem. At ab perferendis itaque quae obcaecati. Amet
+					voluptatem maxime itaque non, necessitatibus voluptas velit vitae,
+					mollitia est exercitationem dicta incidunt odit tempora!
+				</p>
+			</div>
+		</section>
+	</body>
+	<script>
+		(() => {
+			const sections = document.querySelectorAll("section");
+
+			// for (let item of sections) {
+			// 	console.log(item);
+			// 	item.style.height = innerHeight + "px";
+			// }
+			Setlayout();
+			function Setlayout() {
+				for (let i = 0; i < sections.length; i++) {
+					const ooo = sections.item(i);
+					ooo.style.height = innerHeight + "px";
+				}
+			}
+
+			window.addEventListener("resize", Setlayout);
+		})();
+	</script>
+</html>
