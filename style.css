@@ -95,7 +95,7 @@ section{ min-height:800px; width:100%; background-color: #fff; z-index: 19; }
 video{height: 100%; }
 
 .happy-icon{font-size: 2.5rem;}
-.myface{width: 250px; height: 250px; border-radius: 50%; background-image: url('/images/seojoori.jpg'); background-size:cover; background-repeat: repeat;  position: absolute;  right: 0; bottom: 29px;}
+.myface{width: 250px; height: 250px; border-radius: 50%; background-image: url('images/seojoori.jpg'); background-size:cover; background-repeat: repeat;  position: absolute;  right: 0; bottom: 29px;}
 
 
 /*skills*/
