@@ -8,7 +8,30 @@ let PointText2 = document.querySelector('.point-text2');
 let innerHeight = window.innerHeight;
 let SkillSection = document.getElementById("skill");
 
+let content = document.querySelector('.project-content');
+let contents = document.querySelectorAll('.project-content');
+let multiModal = document.querySelector('.multi-modal');
 
+/*ID 부여하기*/
+function IdCreative (){
+    for(let i=0; i<contents.length; i++){
+       contents[i].id = i;
+      
+       contents[i].addEventListener("click",function(){
+           console.log(this.id)
+           location.assign(`projectdetails/p-${i}`+".html");
+
+       })
+    }
+    
+}
+IdCreative ()
+
+
+/*모달창 띄워주기*/
+
+
+/*스크롤시 Fade In Fade Out 효과*/
 window.addEventListener("scroll",ScrollEvent);
 window.onbeforeunload = () => {
     window.scrollTo(0, 0);
@@ -28,6 +51,8 @@ function Navview(){
     }
 }
 
+
+/*글씨 스크롤 시 효과주기*/
 function PointTextHandler(){
     
     // console.log(window.pageYOffset,SkillSection.offsetTop);

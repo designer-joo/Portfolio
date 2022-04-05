@@ -7,6 +7,7 @@
     font-style: normal;
 }
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +24,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 14px;
+	font-size: 15px;
 	font-family: 'Pretendard-Regular';
 	vertical-align: baseline;
 }
@@ -59,24 +60,22 @@ table {
 }
 
 
-
-
+.wrap {position: absolute; top :50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 1000px; min-width:350px; }
+.part{width: 80%; max-width: 1000px; margin:0 auto;}
 /*header nav*/
-nav{position: fixed; top: 0; left: 0; width: 100%; z-index: 20; background: #fff }
-nav ul{ width: 1000px;  margin: 0 auto; height: 70px;  padding: 1rem; text-align: center; display: flex; justify-content: space-between; align-items: center;}
-nav ul img{width: 70px; border-radius:0; margin: 0 auto; display: inline-block;}
+nav{position: fixed; top: 0; left: 0; width: 100%; margin:0 auto; z-index: 20; background: #fff }
+nav ul{  min-width:350px; max-width:1000px; margin: 0 auto; height: 70px; text-align: center; display: flex; justify-content: space-between; align-items: center;}
+nav ul li p{font-family: 'Black Han Sans'; text-align: left;}
 nav ul li{ display: inline-block; }
 
 
 /* section */
-section{height: 100vh; min-height:800px; width:100%; background-color: #fff; z-index: 19; }
-.section-1{background-color:rgb(0, 0, 0)!important;}
-
+section{ min-height:800px; width:100%; background-color: #fff; z-index: 19; }
 
 /*intro page*/
 
-#intro, #about, #skill, #my-project{ width: 100%; height: 100vh;  }
-
+#intro { width: 100%; height: 100vh;  }
+#about, #skill, #my-project{width: 100%; }
 #about, #skill, #my-project {position: relative;}
 .intro-contents{position: fixed; top :50%; left: 50%; transform: translate(-50%, -50%); text-align: center;  background-color: black; padding: 10px 20px; color: #fff;}
 .intro-contents h1{font-size: 4rem; margin: 2rem 0;}
@@ -84,37 +83,54 @@ section{height: 100vh; min-height:800px; width:100%; background-color: #fff; z-i
 
 /*about us*/
 #intro-text{position: relative;  width: inherit;}
-.strong-text{background-color: rgb(235, 0, 78); color: rgb(46, 46, 46); font-weight:600; font-size: 3rem; display: inline-block; line-height: 3rem;}
-.main-title{color: #fff;}
-.main-title, .skills, .projects{position: absolute; top :50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 1000px; }
+.strong-text{background-color: rgb(196, 154, 250); color: rgb(46, 46, 46); font-weight:600; font-size: 3rem; display: inline-block; line-height: 3rem;}
+.main-title{color: #fff; z-index: 25; text-align: left;}
+
 .main-title h1, .skills h1, .projects h1{ font-size: 3rem; margin-bottom: 8px;}
 .main-sub-text{margin-top: 50px;}
-.main-sub-text p{font-size: 1rem; margin:2rem 0;}
-.main-sub-text > div {margin: 10px 0;}
+.main-sub-text p{font-size: 1.1rem; margin:2rem 0;}
+.main-sub-text > div {margin: 0.8rem 0;}
 
-.happy-icon{font-size: 35px;}
-.myface{width: 350px; height: 350px; border-radius: 50%; background-color: beige;  position: absolute;  right: 0; bottom: 29px;}
+.section-1{height: 100vh; text-align: center; overflow: hidden; }
+video{height: 100%; }
+
+.happy-icon{font-size: 2.5rem;}
+.myface{width: 250px; height: 250px; border-radius: 50%; background-image: url("/images/seojoori.jpg"); background-size:cover; background-repeat: repeat;  position: absolute;  right: 0; bottom: 29px;}
 
 
 /*skills*/
-.point-text1{font-size: 5rem; position: absolute; top: 100px; width: 150%;}
-.point-text2{font-size: 2rem; position: absolute; top: 300px; right: 0px; transition: 0.5s; opacity: 0;}
+.point-text1{font-size: 5rem; position: absolute; top: 50px; width: 150%;}
+.point-text2{font-size: 2rem; position: absolute; top: 200px; right: 0px; transition: 0.5s; opacity: 0;}
 
-#designer-skill li, #publisher-skill li, #etc-skill li{display: inline-block; padding: 20px 50px; width: 80px; text-align: center;}    
+#designer-skill li, #publisher-skill li, #etc-skill li{display: inline-block; padding: 20px 0 20px 50px;  text-align: center;}    
 
 .skillBox {width: 1000px; text-align: right;}
 
 #skill{overflow: hidden;}
 
 /*projects*/
-.project{width: 1000px; }
-.project-wrap{width: }
-.project {width: calc(100%/3.2); padding:5px; border: 1px solid gray; height: 280px;}
+
+.project-wrap{text-align: center; }
+
+.project-content{width: 320px; height: 320px;  overflow: hidden; text-align: center; position: relative; display: inline-block; box-shadow: 1px 2px 10px #00000059; margin: 5px;}
+.project {width: 100%;
+    box-sizing: border-box;
+    
+    display: inline-flex;
+    justify-content: space-evenly;
+	align-items: center;
+   transition: 0.5s;
+	}
+
+.project:hover{transform:scale(1.2); box-sizing: border-box; }
+
+.project-content:hover p{opacity: 1;}
+.project-content p{opacity: 0; z-index: 25; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-color: rgba(0, 0, 0, 0.664); display: block;
+width: 100%; height: 50px; color: #fff; line-height: 50px; font-size: 1.1rem; transition: 0.5s;}
 
 
-
-
-
+.design-projects,.publishing-projects{margin-top: 5rem;}
+.design-projects h2,.publishing-projects h2{font-size: 1.5rem; margin:1rem 0;}
 /*Top Btn*/
 .top-btn{background: #9e9e9e8c; color:#FFF;z-index: 999; position: fixed; bottom: 100px; right: 5%; width: 4rem; height: 4rem; display: flex; align-items: center;
     justify-content: center;}
