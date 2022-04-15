@@ -1,4 +1,9 @@
-
+@font-face {
+    font-family: 'WandocleanseaR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandocleanseaR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -6,7 +11,12 @@
     font-weight: 400;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Dongle-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -20,12 +30,12 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 15px;
-	font-family: 'Pretendard-Regular';
+	font-family: 'WandocleanseaR';
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -37,6 +47,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	position: relative;
 	line-height: 1;
+	cursor:context-menu;
 }
 ol, ul {
 	list-style: none;
@@ -91,16 +102,16 @@ section{ min-height:800px; width:100%; background-color: #fff; z-index: 19; }
 .main-sub-text p{font-size: 1.1rem; margin:2rem 0;}
 .main-sub-text > div {margin: 0.8rem 0;}
 
-.section-1{height: 100vh; text-align: center; overflow: hidden; }
-video{height: 100%; }
+.section-1{height: 100vh; text-align: center; overflow: hidden; background-image: url('images/about_background.jpg'); background-size: cover; background-repeat: no-repeat;}
+.section-1::after{content:''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:#00000066;}
 
 .happy-icon{font-size: 2.5rem;}
 .myface{width: 250px; height: 250px; border-radius: 50%; background-image: url('images/seojoori.jpg'); background-size:cover; background-repeat: repeat;  position: absolute;  right: 0; bottom: 29px;}
 
 
 /*skills*/
-.point-text1{font-size: 5rem; position: absolute; top: 50px; width: 150%;}
-.point-text2{font-size: 2rem; position: absolute; top: 200px; right: 0px; transition: 0.5s; opacity: 0;}
+.point-text1{font-size: 5rem; position: absolute; top: 50px; width: 150%; }
+.point-text2{font-size: 2rem; position: absolute; top: 200px; right: 0px; transition: 0.5s; opacity: 0; font-family:'Dongle-Bold';}
 
 #designer-skill li, #publisher-skill li, #etc-skill li{display: inline-block; padding: 20px 0 20px 50px;  text-align: center;}    
 
@@ -136,3 +147,35 @@ width: 100%; height: 50px; color: #fff; line-height: 50px; font-size: 1.1rem; tr
     justify-content: center;}
 
 .top-btn ::before{content: ''; position: absolute; top: 0; left: 50%;	transform: translateX(-50%); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*project details page css*/
+
+.modal-content{width:100%; min-width:350px;padding: 10px; text-align:center; margin: 0 auto; }
+.modal-content > div {margin-top: 100px;}
+
+.p-detail-text h1 {font-size: 1.5rem; margin: 20px 0;}
+.p-detail-text ul { margin: 20px 0; padding:50px; line-height: 20px; border-bottom: 1px solid lightgray; font-weight: bold;}
+.p-detail-text ul li{margin:10px 0; font-weight: normal;}
+
+.p-detail-text p{display: inline-block; padding: 8px 10px; background-color: black; border-radius: 10px; color: #fff;}
+.p-frame{width: 100%;}
+
+.close-page{cursor: pointer; position: relative; display: inline-block;}
+
+.close-page:hover::after{ content: ''; position: absolute; bottom:-10px; left: 0; width:100%; height: 1px; background-color: black; }
+
+#go-page{ background-color: #fff; border: 1px solid gray; padding: 10px 20px; margin: 30px; cursor: pointer; transition: 0.5s;}
+#go-page:hover{background-color: black; color: #fff;}

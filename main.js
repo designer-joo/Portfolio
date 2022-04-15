@@ -12,20 +12,8 @@ let content = document.querySelector('.project-content');
 let contents = document.querySelectorAll('.project-content');
 let multiModal = document.querySelector('.multi-modal');
 
-/*ID 부여하기*/
-function IdCreative (){
-    for(let i=0; i<contents.length; i++){
-       contents[i].id = i;
-      
-       contents[i].addEventListener("click",function(){
-           console.log(this.id)
-           location.assign(`projectdetails/p-${i}`+".html");
 
-       })
-    }
-    
-}
-IdCreative ()
+
 
 
 /*모달창 띄워주기*/
@@ -33,9 +21,9 @@ IdCreative ()
 
 /*스크롤시 Fade In Fade Out 효과*/
 window.addEventListener("scroll",ScrollEvent);
-window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-  }
+// window.onbeforeunload = () => {
+//     window.scrollTo(0, 0);
+//   }
   
 
 function ScrollEvent(){
