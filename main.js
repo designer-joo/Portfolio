@@ -8,12 +8,14 @@ let PointText2 = document.querySelector('.point-text2');
 let innerHeight = window.innerHeight;
 let SkillSection = document.getElementById("skill");
 
+let modals = document.querySelectorAll('.multi-modal')
 let content = document.querySelector('.project-content');
 let contents = document.querySelectorAll('.project-content');
 let multiModal = document.querySelector('.multi-modal');
 
+let closeModal = document.querySelectorAll('.close-page')
 
-
+let Body = document.querySelector('body')
 
 
 /*모달창 띄워주기*/
@@ -24,7 +26,39 @@ window.addEventListener("scroll",ScrollEvent);
 // window.onbeforeunload = () => {
 //     window.scrollTo(0, 0);
 //   }
-  
+ 
+
+
+
+
+function ClickP(){
+
+    for( let i=0; i<contents.length; i++){
+        contents[i].addEventListener("click",function(){
+            modals[this.accessKey].style.display = "table"
+            Nav.style.display = "none"
+            Body.style.overflowY = "hidden"
+
+            
+        function CloseModal(){
+            closeModal[i].addEventListener("click",function(event){
+               event.path[2].style.display="none"
+               Nav.style.display = "flex"
+               Body.style.overflowY = "scroll"
+            })
+        }
+        CloseModal()
+        })
+
+        
+    }
+}
+
+ClickP();
+
+
+
+
 
 function ScrollEvent(){
 
