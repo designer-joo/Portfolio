@@ -9,8 +9,9 @@ let innerHeight = window.innerHeight;
 let SkillSection = document.getElementById("skill");
 
 let modals = document.querySelectorAll('.multi-modal')
-let content = document.querySelector('.project-content');
-let contents = document.querySelectorAll('.project-content');
+
+let content = document.querySelector('.modalpopup');
+let contents = document.querySelectorAll('.modalpopup');
 let multiModal = document.querySelector('.multi-modal');
 
 let closeModal = document.querySelectorAll('.close-page')
@@ -74,7 +75,7 @@ function Navview(){
 }
 
 
-/*글씨 스크롤 시 효과주기*/
+//글씨 스크롤 시 효과주기//
 function PointTextHandler(){
     
     // console.log(window.pageYOffset,SkillSection.offsetTop);
@@ -82,14 +83,14 @@ function PointTextHandler(){
     let SSection_Half = SkillSection.offsetTop/2
     
     if(SSection_Half<= window.pageYOffset && (SSection_Half*2.5) > window.pageYOffset){
-        PointText1.style.left = -(window.pageYOffset-SkillSection.offsetTop)*0.5 +"px"
+        PointText1.style.left = -(window.pageYOffset-SkillSection.offsetTop)*2 -200 +"px"
     }
  
     function PointTextHandler_here(){
          if((SSection_Half*1.5) < window.pageYOffset){
              
-            PointText2.style.opacity =  (window.pageYOffset-SkillSection.offsetTop+200)
-            PointText2.style.right =(window.pageYOffset-SkillSection.offsetTop+200)+"px"
+            PointText2.style.opacity =  (window.pageYOffset-SkillSection.offsetTop+500)
+            PointText2.style.right =(window.pageYOffset-SkillSection.offsetTop+500)+"px"
         }
 
       
@@ -104,3 +105,49 @@ PointTextHandler();
 }
 
 ScrollEvent();
+
+
+// TOP 버튼 누를때 이동
+
+mybutton = document.getElementById("myBtn");
+
+// 화면에서 20px 아래로 내려갈 때 버튼생성
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// 버튼 누르면 위로 이동 //
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+}
+
+//스크롤 시 부드럽게 앵커 이동
+
+let aboutus = document.querySelector("#about")
+let aboutusTop = aboutus.offsetTop
+
+let portfolio = document.querySelector("#my-project")
+let portfolioTop = portfolio.offsetTop
+
+
+let nav = document.querySelector(".nav-box")
+let navHeight = nav.offsetHeight
+
+function ClickMenu(event){
+
+
+if(event.target.className == "about"){
+  scrollTo({ top: aboutusTop-navHeight, behavior: 'smooth' });
+  
+}else if(event.target.className == "portfolio"){
+  scrollTo({ top: portfolioTop-navHeight, behavior: 'smooth' });
+}
+
+}

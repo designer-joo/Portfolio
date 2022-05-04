@@ -17,37 +17,36 @@
    <div class="intro-contents">
 
     <h1>S.D portfolio</h1>
-
     <p>Designer / Publisher</p>
 
    </div>
 </section>
  
  <nav id ="nav">
-    <ul>
+    <ul class="nav-box">
      <li>
-         <p>Design Joo</p>
+         <p>SEO.D</p>
      </li>  
      <li>
-         <a href=""><p>ABOUT US</p></a>
+         <a href="#none" onclick="ClickMenu(event)"><p class="about">ABOUT US</p></a>
      </li>            
      <li>
-         <a href=""><p>PORTFOLIO</p></a>
+         <a href="#none" onclick="ClickMenu(event)"><p class="portfolio">PORTFOLIO</p></a>
      </li>
      <li>
-         <a href=""><p>CONTACT ME</p></a>
+         <a href="tel:010-3302-8494" ><p>CONTACT ME</p></a>
          </li>   
     </ul>
 </nav>
 
    <section id="about" class="section-1">
-         
+   
        <article class="main-title wrap">
+        <div class="myface"></div> 
            <h1>Hellow World!</h1>
            <br>
+            <h1 class="strong-text">안녕하세요! <span class="happy-icon">🤗</span>서디 입니다.</h1>
            
-           <h1 class="strong-text">안녕하세요! <span class="happy-icon">🤗</span>서디 입니다.</h1>
-           <div class="myface"></div>
            <div class="main-sub-text">    
                <div class="basic-introduce">
                    <p>저는 웹에 관련된 모든 디자인들을 좋아해요.</p>
@@ -56,11 +55,10 @@
                     <p>경력 : 프리랜서 웹 / 편집 디자인 경력 (7년)</p>
                </div>    
                <div class="sub-introduce">
-                   
-                   <p>일부에게 "예쁘다" 라는 디자인보다 모두에게 "깔끔하다"라는 느낌이 잘 전달되는 디자인을 하고 싶습니다.</p> 
-                   
-                   <p>관심사 : 퍼블리싱을 하다보니 프론트앤드에도 관심을 갖고 열정적으로 공부하고 있어요.</p>  
-                   
+                  
+                   <p>일부에게 "예쁘다" 라는 디자인보다 모두에게 "깔끔하다"라는 느낌이 잘 전달되는 디자인을 하고 싶어요.</p> 
+                   <p>인터렉티브 웹, 프론트앤드에도 관심을 갖고 공부하고 있어요.</p>  
+                  
                </div>    
            </div>
         </article>
@@ -70,17 +68,18 @@
 
    <section id="skill">
     <div class="point-text1">
-        "함께 일 할 퍼블리셔 + 디자이너를 찾으시나요?"
+        " 다재다능한 퍼블리셔 + 디자이너를 찾으시나요? "
      </div>
      <div class="point-text2">
         🤗 여기있어요!
      </div>
-       <article class="skills wrap">
+
+
+     <article class="skills wrap">
            <h1>Skills</h1>
-           <h3>가능한 프로그램</h3>
+           <h3>다루는 프로그램 & 역량</h3>
            
-           
-               <ul id = "designer-skill" class="skillBox">
+                   <ul id = "designer-skill" class="skillBox">
                    <li>
                       <img src="http://seod1028.cafe24.com//project/images/icon/skill_photoshop.png">
                       <p>photoshop</p>
@@ -121,16 +120,19 @@
                    </li>
                </ul>
            
-               <ul id = "etc-skill" class="skillBox">
-                   <li>
-                     <img src="http://seod1028.cafe24.com//project/images/icon/skill_jp.png">
-                      <p>Zeplin</p>
-                   </li>
-               </ul>
-          
-           </ul>
-        
-       </article>
+             
+         
+        <div class="about_attitude">
+            <p>🧾다양한 직무를 경험해 봤어요!</p>
+            <p>- 사진촬영, 모델보정, UXUI, 퍼블리싱, 편집디자인, 쇼핑몰 또는 백화점 몰 상품등록 솔루션이용</p>
+            <p>🙆‍♀️한번 일했던 업체와는 오랫동안 합을 맞춰 일해 오고 있어요.</p>
+            <p>👀항상 공부하는 마음으로 새로운 기술, 방법을 찾아보고 배우는 것을 즐겨요.</p>
+            <p>🎈책임감을 갖고 즐거운 마음으로 디자인과 퍼블리싱을 하고 있어요.</p>
+            <p>✍피드백을 받으면 다음 업무때는 같은 실수를 반복하지 않으려 공부하며 메모해둬요.</p>
+            
+        </div>
+
+     </article>
    </section>
 
    <section id="my-project">
@@ -143,7 +145,7 @@
         <h2>Publishing-portfolio</h2>
      <div class="project-wrap" accessKey="publishing">
     
-        <div class="project-content" accessKey="0">
+        <div class="project-content modalpopup" accessKey="0">
            <div class="box">
             <img src="images/p_thumb1.png" class="project project_01">
             <p>후지쯔</p>
@@ -151,14 +153,14 @@
         </div>
         
 
-        <div class="project-content" accessKey="1">
+        <div class="project-content modalpopup" accessKey="1">
             <div class="box">
                 <img src="images/p_thumb2.png" class="project project_01">
                 <p>한국경제행정연구원</p>
                </div> 
         </div>
         
-        <div class="project-content" accessKey="2">
+        <div class="project-content modalpopup" accessKey="2">
             <div class="box">
                 <img src="images/p_thumb3.png" class="project project_01">
                 <p>이우드</p>
@@ -166,21 +168,21 @@
         </div>
 
         
-        <div class="project-content" accessKey="3">
+        <div class="project-content modalpopup" accessKey="3">
             <div class="box">
                 <img src="images/p_thumb5.png" class="project project_01">
                 <p>대한자치행정연구원</p>
                </div> 
         </div>  
 
-        <div class="project-content" accessKey="4">
+        <div class="project-content modalpopup" accessKey="4">
             <div class="box">
                 <img src="images/p_thumb6.png" class="project project_01">
                 <p>아시트리움</p>
                </div> 
         </div>  
 
-        <div class="project-content" accessKey="5">
+        <div class="project-content modalpopup" accessKey="5">
             <div class="box">
                 <img src="images/p_thumb7.png" class="project project_01">
                 <p>스페이스캐스팅</p>
@@ -194,87 +196,92 @@
     <div class="design-projects"> 
         <h2>Design-portfolio</h2>
         <div class="project-wrap" accessKey="design">
-           
+
+
+            <div class="project-content" accessKey="18">
+                <div class="box">
+                    <img src="images/d_thumb14.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_M.png')">
+                    <p>카드뉴스 디자인</p>
+                   </div> 
+            </div>  
+
+
             <div class="project-content" accessKey="6">
                 <div class="box">
-                    <img src="images/d_thumb1.png" class="project project_01">
+                    <img src="images/d_thumb1.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_A.png')">
                     <p>상세페이지</p>
                    </div> 
             </div> 
              
             <div class="project-content" accessKey="7">
                 <div class="box">
-                    <img src="images/d_thumb2.png" class="project project_01">
+                    <img src="images/d_thumb2.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_B.jpg')">
                     <p>포스터 디자인</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="8">
                 <div class="box">
-                    <img src="images/d_thumb3.png" class="project project_01">
+                    <img src="images/d_thumb3.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_C.jpg')">
                     <p>상세페이지</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="9">
                 <div class="box">
-                    <img src="images/d_thumb4.png" class="project project_01">
+                    <img src="images/d_thumb4.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_D.jpg')">
                     <p>상세페이지</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="10">
                 <div class="box">
-                    <img src="images/d_thumb5.png" class="project project_01">
+                    <img src="images/d_thumb5.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_E.jpg')">
                     <p>상세페이지</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="11">
                 <div class="box">
-                    <img src="images/d_thumb6.png" class="project project_01">
+                    <img src="images/d_thumb6.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_F.jpg')">
                     <p>상세페이지</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="12">
                 <div class="box">
-                    <img src="images/d_thumb7.png" class="project project_01">
+                    <img src="images/d_thumb7.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_G.jpg')">
                     <p>상세페이지</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="13">
                 <div class="box">
-                    <img src="images/d_thumb8.png" class="project project_01">
+                    <img src="images/d_thumb8.png" class="project project_01" onclick="window.open('/projectdetails/p_images/design_H.png')">
                     <p>기업 About Us</p>
                    </div> 
             </div>  
-            <div class="project-content" accessKey="14">
+            <div class="project-content" accessKey="14" >
                 <div class="box">
-                    <img src="images/d_thumb9.png" class="project project_01">
+                    <img src="images/d_thumb9.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_I.jpg')">
                     <p>로고 및 BI 디자인</p>
                    </div> 
             </div>  
            
             <div class="project-content" accessKey="15">
                 <div class="box">
-                    <img src="images/d_thumb11.png" class="project project_01">
+                    <img src="images/d_thumb11.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_J.jpg')">
                     <p>2D 랜더링</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="16">
                 <div class="box">
-                    <img src="images/d_thumb12.png" class="project project_01">
+                    <img src="images/d_thumb12.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_K.jpg')">
                     <p>디자인 및 Mock Up</p>
                    </div> 
             </div>  
             <div class="project-content" accessKey="17">
                 <div class="box">
-                    <img src="images/d_thumb13.png" class="project project_01">
+                    <img src="images/d_thumb13.png" class="project project_01"onclick="window.open('/projectdetails/p_images/design_L.png')">
                     <p>디자인 및 Mock Up</p>
                    </div> 
             </div>  
-            <div class="project-content" accessKey="18">
-                <div class="box">
-                    <img src="images/d_thumb14.png" class="project project_01">
-                    <p>카드뉴스 디자인</p>
-                   </div> 
-            </div>  
+
+          
             <div class="project-content" accessKey="19">
                 <div class="box">
                     <img src="images/thumbgif1.gif" class="project project_01">
@@ -350,12 +357,14 @@
 </article>
 
 
+<!--포트폴리오 디테일 팝업창 모음-->
+<article>
 
 <section class="multi-modal">
     <div class="modal-content" value="0">
        <div class="close-page"> 닫기 </div>
        <div class="p-detail-text">
-           <h1>후지쯔 홈페이지</h1>
+           <h1>후지쯔</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
            <ul>지시사항
               <li>- 로고색상을 최대한 활용해 주세요.</li> 
@@ -380,7 +389,7 @@
     <div class="modal-content">
        <div class="close-page"> 닫기 </div>
        <div class="p-detail-text">
-           <h1>경제행정연구원 홈페이지</h1>
+           <h1>경제행정연구원</h1>
            <p>#디자인</p> <p>#홈페이지 구축</p>
            <ul>지시사항
               <li>- 로고색상을 하단부분에 얇게 포인트로 활용해 주세요.</li> 
@@ -452,9 +461,64 @@
     </div>
   </section>
 
+  <section class="multi-modal" value="4">
+    <div class="modal-content">
+       <div class="close-page"> 닫기 </div>
+       <div class="p-detail-text">
+           <h1>아시트리움</h1>
+           <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
+           <ul>지시사항
+              <li>- 이미지(포트폴리오)를 많이 보여주세요.</li> 
+              <li>- 큰 메뉴 기획서에 맞게 디자인 해주세요.</li> 
+              <li>- 전체적으로 하얀색은 많게 블루톤은 포인트로 작업해주세요.</li>
+              
+           </ul>
+       </div>
+       <div class="p-box">
+          
+           <img src="/projectdetails/p_images/portfolioE.png" class="p-frame">
+           
+       
+          
+           <button id="go-page" onClick="window.open('https://ewoodmall.co.kr/')">바로가기</button>
+          
+       </div>
+    </div>
+  </section>
+
+  <section class="multi-modal" value="5">
+    <div class="modal-content">
+       <div class="close-page">닫기</div>
+       <div class="p-detail-text">
+           <h1>스페이스캐스팅</h1>
+           <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
+           <ul>지시사항
+              <li>- 이미지(포트폴리오)를 많이 보여주세요.</li> 
+              <li>- 큰 메뉴 기획서에 맞게 디자인 해주세요.</li> 
+              <li>- 전체적으로 하얀색은 많게 블루톤은 포인트로 작업해주세요.</li>
+              
+           </ul>
+       </div>
+       <div class="p-box">
+          
+           <img src="/projectdetails/p_images/portfolioF.png" class="p-frame">
+           
+       
+          
+           <button id="go-page" onClick="window.open('https://spacecasting.co.kr/')">바로가기</button>
+          
+       </div>
+    </div>
+  </section>
 
 
-<div class="top-btn">
+
+
+
+
+</article>
+
+<div class="top-btn" id="myBtn" onclick="topFunction()">
     <div class="GoToTop">
       <p>Top</p>
     </div>
@@ -464,7 +528,7 @@
 <footer>
     <div class="footer-wrap">
        <h1>CONTACT ME!</h1> 
-       <p>SEO.D / Tel: 010-3302-8494 / E-mail: darling1028@naver.com</p>
+       <p >SEO.D / <a href="tel:010-3302-8494" >Tel: 010-3302-8494 </a>/ <a href="https://mail.google.com/mail/u/0/?fs=1&to=sungmino@mginfo.co.kr&tf=cm">E-mail: darling1028@naver.com</a></p>
     </div>
 </footer>
 

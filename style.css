@@ -48,6 +48,7 @@ body {
 	position: relative;
 	line-height: 1;
 	cursor:context-menu;
+    min-width:350px;
     
 }
 ol, ul {
@@ -72,53 +73,64 @@ table {
 }
 
 
-.wrap {position: absolute; top :50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 1000px; min-width:350px; }
+.wrap { width: 80%; max-width: 1000px;  margin: 0 auto; position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);;}
 .part{width: 80%; max-width: 1000px; margin:0 auto;}
 /*header nav*/
 nav{position: fixed; top: 0; left: 0; width: 100%; margin:0 auto; z-index: 20; background: #fff }
-nav ul{  min-width:350px; max-width:1000px; margin: 0 auto; height: 70px; text-align: center; display: flex; justify-content: space-between; align-items: center;}
-nav ul li p{font-family: 'Black Han Sans'; text-align: left;}
+nav ul{  min-width:350px; max-width:1000px; margin: 0 auto; height: 70px; text-align: center; display: flex; justify-content: space-between;
+    align-items: center; padding: 10px;}
+nav ul li p{text-align: left; font-weight: bold; }
 nav ul li{ display: inline-block; }
 
-
+article h3{margin-top: 10px;}
 /* section */
-section{ min-height:800px; width:100%; background-color: #fff; z-index: 19; }
+
+section{ height:1200px;  width:100%; background-color: #fff; z-index: 19;  min-width:350px;}
 
 /*intro page*/
 
 #intro { width: 100%; height: 100vh;  }
-#about, #skill, #my-project{width: 100%; }
+#about, #skill{width: 100%; padding: 50px 0;}
+#my-project{height: 100% !important; padding:50px 0 0; width: 100%; }
 #about, #skill, #my-project {position: relative;}
-.intro-contents{position: fixed; top :50%; left: 50%; transform: translate(-50%, -50%); text-align: center;  background-color: black; padding: 10px 20px; color: #fff;}
-.intro-contents h1{font-size: 4rem; margin: 2rem 0;}
+.intro-contents{position: fixed; top :50%; left: 50%; transform: translate(-50%, -50%); text-align: center;  background-color: black; padding: 20px 20px; color: #fff;}
+.intro-contents h1{font-size: 4rem; margin-bottom: 1.5rem;}
 
 
 /*about us*/
+
 #intro-text{position: relative;  width: inherit;}
 .strong-text{background-color: rgb(196, 154, 250); color: rgb(46, 46, 46); font-weight:600; font-size: 3rem; display: inline-block; line-height: 3rem;}
 .main-title{color: #fff; z-index: 25; text-align: left;}
 
-.main-title h1, .skills h1, .projects h1{ font-size: 3rem; margin-bottom: 8px;}
-.main-sub-text{margin-top: 50px;}
+.main-title h1, .skills h1, .projects h1{ font-size: 3rem; }
+.main-sub-text{margin-top: 50px; z-index: 99;}
 .main-sub-text p{font-size: 1.1rem; margin:2rem 0;}
-.main-sub-text > div {margin: 0.8rem 0;}
+.main-sub-text > div {margin: 3rem 0; line-height: 1.5rem;}
+
+
 
 .section-1{height: 100vh; text-align: center; overflow: hidden; background-image: url('images/about_background.jpg'); background-size: cover; background-repeat: no-repeat;}
-.section-1::after{content:''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:#00000066;}
+.section-1::before{content:''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:#00000066; }
 
 .happy-icon{font-size: 2.5rem;}
-.myface{width: 250px; height: 250px; border-radius: 50%; background-image: url('images/seojoori.jpg'); background-size:cover; background-repeat: repeat;  position: absolute;  right: 0; bottom: 29px;}
+.myface{width: 250px; height: 250px; border-radius: 50%; background-image: url('images/seojoori.jpg'); background-size:cover; background-repeat: repeat; }
 
 
 /*skills*/
-.point-text1{font-size: 5rem; position: absolute; top: 50px; width: 150%; }
-.point-text2{font-size: 2rem; position: absolute; top: 200px; right: 0px; transition: 0.5s; opacity: 0; font-family:'Dongle-Bold';}
 
-#designer-skill li, #publisher-skill li, #etc-skill li{display: inline-block; padding: 20px 0 20px 50px;  text-align: center;}    
+.point-text1{font-size: 3rem; position: absolute; top: 50px; width: 150%; }
+.point-text2{font-size: 2rem; position: absolute; top: 150px; right: 0px; transition: 0.5s; opacity: 0; font-family:'Dongle-Bold';}
 
-.skillBox {width: 1000px; text-align: right;}
+#designer-skill li, #publisher-skill li, #etc-skill li{display: inline-block; padding: 20px 0 20px 50px;  text-align: center;  width: 5rem;
+    height: 6rem;}    
 
+.skillBox {max-width: 1000px; text-align: right; min-width: 550px;}
+.skills{ padding-bottom:100px; border-bottom: 1px solid gray;}
 #skill{overflow: hidden;}
+
+.about_attitude{margin-top: 20px;}
+.about_attitude p{line-height: 2rem;}
 
 /*projects*/
 
@@ -145,10 +157,13 @@ width: 100%; height: 50px; color: #fff; line-height: 50px; font-size: 1.1rem; tr
 .design-projects h2,.publishing-projects h2{font-size: 1.5rem; margin:1rem 0;}
 /*Top Btn*/
 .top-btn{background: #9e9e9e8c; color:#FFF;z-index: 999; position: fixed; bottom: 100px; right: 5%; width: 4rem; height: 4rem; display: flex; align-items: center;
-    justify-content: center;}
+    justify-content: center; transition: 0.5s; cursor: pointer;}
 
-.top-btn ::before{content: ''; position: absolute; top: 0; left: 50%;	transform: translateX(-50%); }
+.top-btn ::before{content: ''; position: absolute; top: 0; left: 50%;	transform: translateX(-50%); background-image: url('/images/');}
 
+#myBtn:hover {
+    background-color: rgb(46, 46, 46); 
+  }
 
 
 
@@ -164,8 +179,9 @@ width: 100%; height: 50px; color: #fff; line-height: 50px; font-size: 1.1rem; tr
 
 /*project details page css*/
 
-.multi-modal{display: none; position: fixed; top: 0; z-index: 100; background-color: #fff; height: 100vh;}
-.modal-content{padding: 10px; text-align:center; margin: 0 auto; display: table-cell;  vertical-align: middle;}
+.multi-modal{display: none; position: fixed; top: 0;  z-index: 100; background-color: #fff; height: 100vh;}
+
+.modal-content{  padding: 10px; text-align:center; margin: 0 auto; display: table-cell;  vertical-align: middle;}
 .modal-content > div {margin: 50px;}
 
 .p-detail-text h1 {font-size: 1.5rem; margin: 20px 0;}
@@ -194,3 +210,31 @@ footer{background-color: lightslategray; width: 100%; height: 250px; text-align:
 
 .footer-wrap{vertical-align: middle; display:table-cell;} 
 .footer-wrap h1{margin: 25px; font-size: 1.5rem;}
+
+
+
+/*mobile.ver*/
+
+@media (min-width: 0px) and (max-width: 550px) {
+    .intro-contents h1{font-size: 1.5rem; line-height: 2rem;}
+    .intro-contents p{line-height: 1.5rem;}
+    #my-project{padding:50px 0 0;}
+
+
+    .wrap { width: 90%;}
+
+    .myface{width: 150px; height: 150px; margin-bottom: 20px;}
+
+
+    .main-title h1, .skills h1, .projects h1{font-size: 1.5rem;}
+    
+    
+    .main-sub-text p{font-size: 1rem; margin: 1rem 0;}
+
+
+    /*모달창*/
+    .modal-content{padding: 0;}
+    .modal-content > div{margin: 5px;}
+    
+    
+}
