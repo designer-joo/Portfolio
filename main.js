@@ -189,3 +189,14 @@ function Mclose(){
       Body.style.overflowY = "scroll"
   }
 }
+
+
+//로딩 페이지//
+
+function onloadevent(){
+  document.getElementById("load").style.visibility="hidden"
+}
+
+window.onload=function(){
+  onloadevent();
+}
