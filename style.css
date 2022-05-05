@@ -260,7 +260,8 @@ footer{background-image: url('images/contact_footer.jpg');  background-repeat: n
     .modal-content{padding: 0;}
     .modal-content > div{margin: 5px;}
     
-    .point-text1{position: static; width:95%; font-size:1.5rem; line-height: 3rem; text-align: center;   margin: 0 auto; font-weight: bold;}
+
+    .point-text1{position: static; width:95%; font-size:1.3rem; line-height: 2rem; text-align: center; top:10px;   margin: 0 auto; font-weight: bold;}
     .point-text2{ right: 20px!important; top:12%; 
         animation-name: point-effect2;  
         animation-duration: 0.5s;
