@@ -16,10 +16,10 @@ let contents = document.querySelectorAll('.modalpopup');
 
 let modalContent = document.querySelectorAll(".modal-content")
 
-
 let closeModal = document.querySelectorAll('.close-page')
 
 let Body = document.querySelector('body')
+
 
 //스크롤 시 부드럽게 앵커 이동
 
@@ -47,7 +47,7 @@ function ClickMenu(event){
 }
 
 
-/*모달창 띄워주기*/
+
 
 
 /*스크롤시 Fade In Fade Out 효과*/
@@ -57,39 +57,7 @@ window.addEventListener("scroll",ScrollEvent);
  }
  
 
-
-
-
-// function ClickP(){
-
-//     for( let i=0; i<contents.length; i++){
-//         contents[i].addEventListener("click",function(){
-//             modals[this.accessKey].style.display = "table"
-//             modals[this.accessKey].style.position = "fixed"
-//             Nav.style.display = "none"
-//             Body.style.overflowY = "hidden"
-
-//         })
-
-        
-//     }
-// }
-
-// ClickP();
-
-// function CloseModal(event){
-//   closeModal.addEventListener("click",function(event){
-//     console.log(event)
-     
-//      event.path[2].style.display="none"
-//      Nav.style.display = "flex"
-//      Body.style.overflowY = "scroll"
-//   })
-// }
-// CloseModal()
-
-
-
+ 
 
 function ScrollEvent(){
 
@@ -152,7 +120,7 @@ function scrollFunction() {
   }
 }
 
-// 버튼 누르면 위로 이동 //
+// TOP버튼 누르면 위로 이동 //
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
@@ -160,13 +128,12 @@ function topFunction() {
 
 
 
+//모달창 매칭해서 띄우기//
+
 function Mopen(event){
 
   console.log(event.target.accessKey)
   console.log(modals)
-
-  //클릭함
-  //클릭된 타겟의 같은 어세스키를 찾아서 보여줌.
 
   for(let i=0; i<contents.length; i++){
    
@@ -181,6 +148,8 @@ function Mopen(event){
 
 }
 
+//모달창 닫기//
+
 function Mclose(){
   for(let i=0; i<contents.length; i++){
        
@@ -189,6 +158,7 @@ function Mclose(){
       Body.style.overflowY = "scroll"
   }
 }
+
 
 
 //로딩 페이지//
