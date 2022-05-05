@@ -166,46 +166,46 @@
         <h2>Publishing-portfolio</h2>
      <div class="project-wrap" accessKey="publishing">
     
-        <div class="project-content modalpopup" accessKey="0">
+        <div class="project-content modalpopup" onclick="Mopen(event)">
            <div class="box">
-            <img src="images/p_thumb1.png" class="project project_01">
+            <img src="images/p_thumb1.png" class="project project_01" accessKey="0" >
             <p>후지쯔</p>
             </div> 
         </div>
         
 
-        <div class="project-content modalpopup" accessKey="1">
+        <div class="project-content modalpopup" onclick="Mopen(event)">
             <div class="box">
-                <img src="images/p_thumb2.png" class="project project_01">
+                <img src="images/p_thumb2.png" class="project project_01" accessKey="1"  >
                 <p>한국경제행정연구원</p>
                </div> 
         </div>
         
-        <div class="project-content modalpopup" accessKey="2">
+        <div class="project-content modalpopup"  onclick="Mopen(event)">
             <div class="box">
-                <img src="images/p_thumb3.png" class="project project_01">
+                <img src="images/p_thumb3.png" class="project project_01" accessKey="2" >
                 <p>이우드</p>
                </div> 
         </div>
 
         
-        <div class="project-content modalpopup" accessKey="3">
+        <div class="project-content modalpopup"  onclick="Mopen(event)">
             <div class="box">
-                <img src="images/p_thumb5.png" class="project project_01">
+                <img src="images/p_thumb5.png" class="project project_01" accessKey="3">
                 <p>대한자치행정연구원</p>
                </div> 
         </div>  
 
-        <div class="project-content modalpopup" accessKey="4">
+        <div class="project-content modalpopup"  onclick="Mopen(event)">
             <div class="box">
-                <img src="images/p_thumb6.png" class="project project_01">
+                <img src="images/p_thumb6.png" class="project project_01" accessKey="4">
                 <p>아시트리움</p>
                </div> 
         </div>  
 
-        <div class="project-content modalpopup" accessKey="5">
+        <div class="project-content modalpopup"  onclick="Mopen(event)">
             <div class="box">
-                <img src="images/p_thumb7.png" class="project project_01">
+                <img src="images/p_thumb7.png" class="project project_01" accessKey="5">
                 <p>스페이스캐스팅</p>
                </div> 
         </div>  
@@ -325,9 +325,9 @@
 <!--포트폴리오 디테일 팝업창 모음-->
 <article>
 
-<section class="multi-modal">
-    <div class="modal-content" value="0">
-       <div class="close-page"> 닫기 </div>
+<section class="multi-modal" accessKey="0">
+    <div class="modal-content">
+       <div class="close-page" onclick="Mclose()"> 닫기 </div>
        <div class="p-detail-text">
            <h1>후지쯔</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
@@ -350,9 +350,9 @@
   </section>
 
 
-<section class="multi-modal" value="1">
+<section class="multi-modal" accessKey="1">
     <div class="modal-content">
-       <div class="close-page"> 닫기 </div>
+       <div class="close-page" onclick="Mclose()"> 닫기 </div>
        <div class="p-detail-text">
            <h1>경제행정연구원</h1>
            <p>#디자인</p> <p>#홈페이지 구축</p>
@@ -376,9 +376,9 @@
     </div>
   </section>
 
-  <section class="multi-modal" value="2">
+  <section class="multi-modal" accessKey="2">
     <div class="modal-content">
-       <div class="close-page"> 닫기 </div>
+       <div class="close-page" onclick="Mclose()"> 닫기 </div>
        <div class="p-detail-text">
            <h1>이우드 쇼핑몰</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
@@ -403,7 +403,7 @@
 
   <section class="multi-modal" value="3">
     <div class="modal-content">
-       <div class="close-page"> 닫기 </div>
+       <div class="close-page" onclick="Mclose()"> 닫기 </div>
        <div class="p-detail-text">
            <h1>대한자치행정연구원</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
@@ -428,7 +428,7 @@
 
   <section class="multi-modal" value="4">
     <div class="modal-content">
-       <div class="close-page"> 닫기 </div>
+       <div class="close-page" onclick="Mclose()"> 닫기 </div>
        <div class="p-detail-text">
            <h1>아시트리움</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>
@@ -453,7 +453,7 @@
 
   <section class="multi-modal" value="5">
     <div class="modal-content">
-       <div class="close-page">닫기</div>
+       <div class="close-page" onclick="Mclose()">닫기</div>
        <div class="p-detail-text">
            <h1>스페이스캐스팅</h1>
            <p>#기획</p> <p>#디자인</p> <p>#홈페이지 구축</p>

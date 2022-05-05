@@ -8,15 +8,43 @@ let PointText2 = document.querySelector('.point-text2');
 let innerHeight = window.innerHeight;
 let SkillSection = document.getElementById("skill");
 
-let modals = document.querySelectorAll('.multi-modal')
+let modals = document.getElementsByClassName('multi-modal')
+
 
 let content = document.querySelector('.modalpopup');
 let contents = document.querySelectorAll('.modalpopup');
-let multiModal = document.querySelector('.multi-modal');
+
+let modalContent = document.querySelectorAll(".modal-content")
+
 
 let closeModal = document.querySelectorAll('.close-page')
 
 let Body = document.querySelector('body')
+
+//스크롤 시 부드럽게 앵커 이동
+
+let aboutus = document.querySelector("#about")
+let aboutusTop = aboutus.offsetTop
+
+let portfolio = document.querySelector("#my-project")
+let portfolioTop = portfolio.offsetTop
+
+
+let nav = document.querySelector(".nav-box")
+let navHeight = nav.offsetHeight
+
+
+function ClickMenu(event){
+
+
+  if(event.target.className == "about"){
+    scrollTo({ top: aboutusTop-navHeight, behavior: 'smooth' });
+    
+  }else if(event.target.className == "portfolio"){
+    scrollTo({ top: portfolioTop-navHeight, behavior: 'smooth' });
+  }
+
+}
 
 
 /*모달창 띄워주기*/
@@ -24,39 +52,41 @@ let Body = document.querySelector('body')
 
 /*스크롤시 Fade In Fade Out 효과*/
 window.addEventListener("scroll",ScrollEvent);
-// window.onbeforeunload = () => {
-//     window.scrollTo(0, 0);
-//   }
+ window.onbeforeunload = () => {
+     window.scrollTo(0, 0);
+ }
  
 
 
 
 
-function ClickP(){
+// function ClickP(){
 
-    for( let i=0; i<contents.length; i++){
-        contents[i].addEventListener("click",function(){
-            modals[this.accessKey].style.display = "table"
-            Nav.style.display = "none"
-            Body.style.overflowY = "hidden"
+//     for( let i=0; i<contents.length; i++){
+//         contents[i].addEventListener("click",function(){
+//             modals[this.accessKey].style.display = "table"
+//             modals[this.accessKey].style.position = "fixed"
+//             Nav.style.display = "none"
+//             Body.style.overflowY = "hidden"
 
-            
-        function CloseModal(){
-            closeModal[i].addEventListener("click",function(event){
-               event.path[2].style.display="none"
-               Nav.style.display = "flex"
-               Body.style.overflowY = "scroll"
-            })
-        }
-        CloseModal()
-        })
+//         })
 
         
-    }
-}
+//     }
+// }
 
-ClickP();
+// ClickP();
 
+// function CloseModal(event){
+//   closeModal.addEventListener("click",function(event){
+//     console.log(event)
+     
+//      event.path[2].style.display="none"
+//      Nav.style.display = "flex"
+//      Body.style.overflowY = "scroll"
+//   })
+// }
+// CloseModal()
 
 
 
@@ -128,26 +158,34 @@ function topFunction() {
   scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
 }
 
-//스크롤 시 부드럽게 앵커 이동
-
-let aboutus = document.querySelector("#about")
-let aboutusTop = aboutus.offsetTop
-
-let portfolio = document.querySelector("#my-project")
-let portfolioTop = portfolio.offsetTop
 
 
-let nav = document.querySelector(".nav-box")
-let navHeight = nav.offsetHeight
+function Mopen(event){
 
-function ClickMenu(event){
+  console.log(event.target.accessKey)
+  console.log(modals)
 
+  //클릭함
+  //클릭된 타겟의 같은 어세스키를 찾아서 보여줌.
 
-if(event.target.className == "about"){
-  scrollTo({ top: aboutusTop-navHeight, behavior: 'smooth' });
-  
-}else if(event.target.className == "portfolio"){
-  scrollTo({ top: portfolioTop-navHeight, behavior: 'smooth' });
+  for(let i=0; i<contents.length; i++){
+   
+    if(modals[i].accessKey == event.target.accessKey ){
+       
+      modals[i].style.display = "table"
+      Nav.style.display = "none"
+      Body.style.overflowY = "hidden"
+    }
+       
+  }
+
 }
 
+function Mclose(){
+  for(let i=0; i<contents.length; i++){
+       
+      modals[i].style.display = "none"
+      Nav.style.display = "flex"
+      Body.style.overflowY = "scroll"
+  }
 }
